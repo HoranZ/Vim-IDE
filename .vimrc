@@ -45,8 +45,14 @@ map <C-t> :TagbarToggle<CR>
 map <F4> :call CreateTags()<CR>
 "<F5> 编译运行
 map <F5> :call ComplieAndRun() <CR>
-"<C-F5> 调试
-map <C-F5> :call Rungdb() <CR>
+map <ESC><SPACE> :call ComplieAndRun() <CR>
+"<F9> 调试
+map <F5> :call Rungdb() <CR>
+map <leader><ESC><SPACE> :call Rungdb() <CR>
+"<F10> 运行
+map <F10> :!time ./%< <CR>
+map <SPACE><ESC> :!time ./%< <CR>
+
 
 "编译
 set makeprg=clang++\ %\ -std=c++11\ -o\ %<
