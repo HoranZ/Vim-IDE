@@ -41,13 +41,13 @@ let g:tagbar_width=30               "设置tagbar的宽度
 map <C-n> :NERDTree<CR>
 "Ctrl + t 打开 tagbar
 map <C-t> :TagbarToggle<CR>
-"ctags 生成 cpp 文件的 tags
+"<F4> ctags 生成 cpp 文件的 tags
 map <F4> :call CreateTags()<CR>
 "<F5> 编译运行
 map <F5> :call ComplieAndRun() <CR>
 map <ESC><SPACE> :call ComplieAndRun() <CR>
 "<F9> 调试
-map <F5> :call Rungdb() <CR>
+map <F9> :call Rungdb() <CR>
 map <leader><ESC><SPACE> :call Rungdb() <CR>
 "<F10> 运行
 map <F10> :!time ./%< <CR>
