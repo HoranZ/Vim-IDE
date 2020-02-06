@@ -54,6 +54,35 @@ map <F10> :!time ./%< <CR>
 map <SPACE><ESC> :!time ./%< <CR>
 
 
+inoremap <C-A> <Esc>^i
+inoremap <C-E> <Esc>$i
+
+inoremap <C-L> <Right>
+inoremap <C-H> <Left>
+inoremap <C-J> <Down>
+inoremap <C-K> <Up>
+
+"move to next word
+inoremap <C-F> <Esc>wwwi
+
+"move to prev word
+inoremap <C-B> <Esc>bi
+
+"del current char
+inoremap <C-D>x <Esc>lxi
+
+"del current word
+inoremap <C-D>w <Esc>ldwi
+
+"del current line
+inoremap <C-D>l <Esc>ddi
+
+"del content from x to line end
+inoremap <C-D>e <Esc>lc$
+
+"del content from x to line end
+inoremap <C-D>a <Esc>lc^
+
 "编译
 set makeprg=clang++\ %\ -std=c++11\ -o\ %<
 func! ComplieAndRun()
